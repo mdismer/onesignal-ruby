@@ -4,7 +4,7 @@ module OneSignal
   class IncludedTargets
     attr_reader :include_player_ids, :include_email_tokens, :include_external_user_ids, :include_ios_tokens,
                 :include_wp_wns_uris, :include_amazon_reg_ids, :include_chrome_reg_ids, :include_chrome_web_reg_ids,
-                :include_android_reg_ids
+                :include_android_reg_ids, :channel_for_external_user_ids
 
     def initialize params
       raise ArgumentError, 'include_player_ids cannot be used with other targets' if params.key?(:include_player_ids) && params.keys.count > 1
@@ -12,6 +12,7 @@ module OneSignal
       @include_player_ids        = params[:include_player_ids]
       @include_email_tokens      = params[:include_email_tokens]
       @include_external_user_ids = params[:include_external_user_ids]
+      @channel_for_external_user_ids = params[:channel_for_external_user_ids]
 
       @include_ios_tokens         = print_warning params, :include_ios_tokens
       @include_wp_wns_uris        = print_warning params, :include_wp_wns_uris
@@ -40,7 +41,8 @@ module OneSignal
         'include_amazon_reg_ids'     => @include_amazon_reg_ids,
         'include_chrome_reg_ids'     => @include_chrome_reg_ids,
         'include_chrome_web_reg_ids' => @include_chrome_web_reg_ids,
-        'include_android_reg_ids'    => @include_android_reg_ids
+        'include_android_reg_ids'    => @include_android_reg_ids,
+        'channel_for_external_user_ids' => @channel_for_external_user_ids
       }
     end
   end
