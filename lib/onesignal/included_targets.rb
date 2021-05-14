@@ -13,7 +13,7 @@ module OneSignal
       @include_email_tokens      = params[:include_email_tokens]
       @include_external_user_ids = params[:include_external_user_ids]
       @channel_for_external_user_ids = params[:channel_for_external_user_ids]
-      OneSignal.config.logger.warn " @channel_for_external_user_ids: #{@ @channel_for_external_user_ids}"
+      OneSignal.config.logger.warn " @channel_for_external_user_ids: #{@channel_for_external_user_ids}"
       @include_ios_tokens         = print_warning params, :include_ios_tokens
       @include_wp_wns_uris        = print_warning params, :include_wp_wns_uris
       @include_amazon_reg_ids     = print_warning params, :include_amazon_reg_ids
