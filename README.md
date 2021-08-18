@@ -2,7 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/onesignal-ruby.svg)](https://badge.fury.io/rb/onesignal-ruby)
 [![CircleCI](https://circleci.com/gh/mikamai/onesignal-ruby.svg?style=svg)](https://circleci.com/gh/mikamai/onesignal-ruby)
 
-A simple, pure Ruby client to the [OneSignal](https://onesignal.com/apps/22bc6dec-5150-4d6d-8628-377259d2dd14/segments) API.
+A simple, pure Ruby client to the [OneSignal Push Notification API](https://onesignal.com/). OneSignal provides a self-serve customer engagement solution for Push Notifications, Email, SMS & In-App.
 
 ## Installation
 
@@ -212,6 +212,8 @@ This repo is managed following the [Git Flow](https://danielkummer.github.io/git
 - `feature/my-awesome-branch` are personal, dedicated branches for working on actual features. They are merged in develop once completed and then deleted.
 - `hotfix/my-awesome-fix` are special branches dedicated to bugfixes that compromise the library functionality. They are merged
 in both master and develop and then deleted.
+  
+[CHANGELOG](CHANGELOG.md) entries MUST be added for every change made to the source code.
 
 ## License
 
